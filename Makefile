@@ -14,6 +14,7 @@ help:
 	@echo "Targets:"
 	@echo "- help (default) = print this info"
 	@echo "- test = run unit tests"
+	@echo "- check = type check using mypy"
 .PHONY: help
 
 test:
@@ -21,3 +22,7 @@ test:
 		&& echo "-- ✅ Tests passed ✅ --" \
 		|| echo "-- ❌ Tests failed ❌ --"
 .PHONY: test
+
+check:
+	@cd src && mypy main.py
+.PHONY: check

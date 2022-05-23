@@ -1,3 +1,7 @@
+"""
+Simple profiling script for the program.
+"""
+
 from pstats import SortKey
 from tempfile import NamedTemporaryFile
 import cProfile
